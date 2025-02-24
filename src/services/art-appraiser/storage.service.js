@@ -1,6 +1,6 @@
 const contentStorage = require('../../utils/storage');
 
-class AntiqueAppraiserStorageService {
+class ArtAppraiserStorageService {
   constructor() {
     this.basePath = 'antique-appraisers/cities';
     this.globalPath = 'antique-appraisers/global';
