@@ -38,7 +38,7 @@ class ArtAppraiserDataService {
       console.log('[ART-APPRAISER] Fetching Perplexity insights');
 
       // Get raw response first
-      const rawResponse = await perplexityService.getArtAppraiserData(city, state);
+      const rawResponse = await perplexityService.getAntiqueAppraiserData(city, state);
 
       // Store raw response for debugging
       await storageService.storeData(city, state, {
@@ -56,7 +56,7 @@ class ArtAppraiserDataService {
         content: rawResponse,
         timestamp: new Date().toISOString(),
         metadata: {
-          type: 'art_appraiser_data',
+          type: 'antique_appraiser_data',
           source: 'perplexity',
           processedAt: new Date().toISOString()
         }

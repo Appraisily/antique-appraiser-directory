@@ -106,11 +106,11 @@ class PerplexityService {
     }
   }
 
-  async getArtAppraiserData(city, state) {
+  async getAntiqueAppraiserData(city, state) {
     const prompt = `Create a detailed directory of art appraisers in ${city}, ${state}. Include:
 
-1. Overview of art appraisal services in ${city}
-2. List as many art appraisers as possible with their:
+1. Overview of antique appraisal services in ${city}
+2. List as many antique appraisers as possible with their:
    - Name and business details
    - Specialties and expertise
    - Contact information
@@ -121,7 +121,7 @@ class PerplexityService {
 
 Keep the response concise and factual.`;
 
-    return this.makeRequest(prompt, 'art_appraiser', {
+    return this.makeRequest(prompt, 'antique_appraiser', {
       model: 'sonar-reasoning-pro',
       temperature: 0.2,
       top_p: 0.9,

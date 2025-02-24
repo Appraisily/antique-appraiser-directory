@@ -3,7 +3,7 @@ const express = require('express');
 const contentStorage = require('./utils/storage');
 const perplexityService = require('./services/perplexity.service');
 const openAIService = require('./services/openai.service');
-const artAppraiserRoutes = require('./routes/art-appraiser.routes');
+const antiqueAppraiserRoutes = require('./routes/antique-appraiser.routes');
 
 async function initializeService(service, name) {
   try {
@@ -46,8 +46,8 @@ async function initialize() {
     console.error('[SERVER] Error initializing services:', error);
   }
 
-  // Art Appraiser routes
-  app.use('/api/art-appraiser', artAppraiserRoutes);
+  // Antique Appraiser routes
+  app.use('/api/antique-appraiser', antiqueAppraiserRoutes);
 
   // Health check endpoint
   app.get('/health', (req, res) => {

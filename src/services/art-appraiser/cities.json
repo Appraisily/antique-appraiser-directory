@@ -1,172 +1,32 @@
 {
   "cities": [
     {
-      "name": "New York",
-      "state": "New York",
-      "slug": "new-york",
-      "latitude": 40.7128,
-      "longitude": -74.0060
+      "name": "Albuquerque",
+      "state": "New Mexico",
+      "slug": "albuquerque",
+      "latitude": 35.0844,
+      "longitude": -106.6504
     },
     {
-      "name": "Los Angeles",
-      "state": "California",
-      "slug": "los-angeles",
-      "latitude": 34.0522,
-      "longitude": -118.2437
+      "name": "Anchorage",
+      "state": "Alaska",
+      "slug": "anchorage",
+      "latitude": 61.2181,
+      "longitude": -149.9003
     },
     {
-      "name": "Chicago",
-      "state": "Illinois",
-      "slug": "chicago",
-      "latitude": 41.8781,
-      "longitude": -87.6298
-    },
-    {
-      "name": "Houston",
+      "name": "Arlington",
       "state": "Texas",
-      "slug": "houston",
-      "latitude": 29.7604,
-      "longitude": -95.3698
+      "slug": "arlington",
+      "latitude": 32.7357,
+      "longitude": -97.1081
     },
     {
-      "name": "Phoenix",
-      "state": "Arizona",
-      "slug": "phoenix",
-      "latitude": 33.4484,
-      "longitude": -112.0740
-    },
-    {
-      "name": "Philadelphia",
-      "state": "Pennsylvania",
-      "slug": "philadelphia",
-      "latitude": 39.9526,
-      "longitude": -75.1652
-    },
-    {
-      "name": "San Antonio",
-      "state": "Texas",
-      "slug": "san-antonio",
-      "latitude": 29.4241,
-      "longitude": -98.4936
-    },
-    {
-      "name": "San Diego",
-      "state": "California",
-      "slug": "san-diego",
-      "latitude": 32.7157,
-      "longitude": -117.1611
-    },
-    {
-      "name": "Dallas",
-      "state": "Texas",
-      "slug": "dallas",
-      "latitude": 32.7767,
-      "longitude": -96.7970
-    },
-    {
-      "name": "San Jose",
-      "state": "California",
-      "slug": "san-jose",
-      "latitude": 37.3382,
-      "longitude": -121.8863
-    },
-    {
-      "name": "Austin",
-      "state": "Texas",
-      "slug": "austin",
-      "latitude": 30.2672,
-      "longitude": -97.7431
-    },
-    {
-      "name": "Jacksonville",
-      "state": "Florida",
-      "slug": "jacksonville",
-      "latitude": 30.3322,
-      "longitude": -81.6557
-    },
-    {
-      "name": "Fort Worth",
-      "state": "Texas",
-      "slug": "fort-worth",
-      "latitude": 32.7555,
-      "longitude": -97.3308
-    },
-    {
-      "name": "Columbus",
-      "state": "Ohio",
-      "slug": "columbus",
-      "latitude": 39.9612,
-      "longitude": -82.9988
-    },
-    {
-      "name": "San Francisco",
-      "state": "California",
-      "slug": "san-francisco",
-      "latitude": 37.7749,
-      "longitude": -122.4194
-    },
-    {
-      "name": "Charlotte",
-      "state": "North Carolina",
-      "slug": "charlotte",
-      "latitude": 35.2271,
-      "longitude": -80.8431
-    },
-    {
-      "name": "Indianapolis",
-      "state": "Indiana",
-      "slug": "indianapolis",
-      "latitude": 39.7684,
-      "longitude": -86.1581
-    },
-    {
-      "name": "Seattle",
-      "state": "Washington",
-      "slug": "seattle",
-      "latitude": 47.6062,
-      "longitude": -122.3321
-    },
-    {
-      "name": "Denver",
+      "name": "Aspen",
       "state": "Colorado",
-      "slug": "denver",
-      "latitude": 39.7392,
-      "longitude": -104.9903
-    },
-    {
-      "name": "Washington",
-      "state": "District of Columbia",
-      "slug": "washington-dc",
-      "latitude": 38.9072,
-      "longitude": -77.0369
-    },
-    {
-      "name": "Boston",
-      "state": "Massachusetts",
-      "slug": "boston",
-      "latitude": 42.3601,
-      "longitude": -71.0589
-    },
-    {
-      "name": "Nashville",
-      "state": "Tennessee",
-      "slug": "nashville",
-      "latitude": 36.1627,
-      "longitude": -86.7816
-    },
-    {
-      "name": "Portland",
-      "state": "Oregon",
-      "slug": "portland",
-      "latitude": 45.5155,
-      "longitude": -122.6789
-    },
-    {
-      "name": "Las Vegas",
-      "state": "Nevada",
-      "slug": "las-vegas",
-      "latitude": 36.1699,
-      "longitude": -115.1398
+      "slug": "aspen",
+      "latitude": 39.1911,
+      "longitude": -106.8175
     },
     {
       "name": "Atlanta",
@@ -176,46 +36,88 @@
       "longitude": -84.3880
     },
     {
-      "name": "Miami",
-      "state": "Florida",
-      "slug": "miami",
-      "latitude": 25.7617,
-      "longitude": -80.1918
+      "name": "Austin",
+      "state": "Texas",
+      "slug": "austin",
+      "latitude": 30.2672,
+      "longitude": -97.7431
     },
     {
-      "name": "Minneapolis",
-      "state": "Minnesota",
-      "slug": "minneapolis",
-      "latitude": 44.9778,
-      "longitude": -93.2650
+      "name": "Baltimore",
+      "state": "Maryland",
+      "slug": "baltimore",
+      "latitude": 39.2904,
+      "longitude": -76.6122
     },
     {
-      "name": "New Orleans",
+      "name": "Baton Rouge",
       "state": "Louisiana",
-      "slug": "new-orleans",
-      "latitude": 29.9511,
-      "longitude": -90.0715
+      "slug": "baton-rouge",
+      "latitude": 30.4515,
+      "longitude": -91.1871
     },
     {
-      "name": "Cleveland",
-      "state": "Ohio",
-      "slug": "cleveland",
-      "latitude": 41.4993,
-      "longitude": -81.6944
+      "name": "Birmingham",
+      "state": "Alabama",
+      "slug": "birmingham",
+      "latitude": 33.5207,
+      "longitude": -86.8025
     },
     {
-      "name": "St. Louis",
-      "state": "Missouri",
-      "slug": "st-louis",
-      "latitude": 38.6270,
-      "longitude": -90.1994
+      "name": "Boise",
+      "state": "Idaho",
+      "slug": "boise",
+      "latitude": 43.6150,
+      "longitude": -116.2023
     },
     {
-      "name": "Pittsburgh",
-      "state": "Pennsylvania",
-      "slug": "pittsburgh",
-      "latitude": 40.4406,
-      "longitude": -79.9959
+      "name": "Boston",
+      "state": "Massachusetts",
+      "slug": "boston",
+      "latitude": 42.3601,
+      "longitude": -71.0589
+    },
+    {
+      "name": "Buffalo",
+      "state": "New York",
+      "slug": "buffalo",
+      "latitude": 42.8864,
+      "longitude": -78.8784
+    },
+    {
+      "name": "Calgary",
+      "state": "Alberta",
+      "slug": "calgary",
+      "latitude": 51.0447,
+      "longitude": -114.0719
+    },
+    {
+      "name": "Charleston",
+      "state": "South Carolina",
+      "slug": "charleston",
+      "latitude": 32.7765,
+      "longitude": -79.9311
+    },
+    {
+      "name": "Charlotte",
+      "state": "North Carolina",
+      "slug": "charlotte",
+      "latitude": 35.2271,
+      "longitude": -80.8431
+    },
+    {
+      "name": "Charlottetown",
+      "state": "Prince Edward Island",
+      "slug": "charlottetown",
+      "latitude": 46.2382,
+      "longitude": -63.1311
+    },
+    {
+      "name": "Chicago",
+      "state": "Illinois",
+      "slug": "chicago",
+      "latitude": 41.8781,
+      "longitude": -87.6298
     },
     {
       "name": "Cincinnati",
@@ -225,11 +127,410 @@
       "longitude": -84.5120
     },
     {
+      "name": "Cleveland",
+      "state": "Ohio",
+      "slug": "cleveland",
+      "latitude": 41.4993,
+      "longitude": -81.6944
+    },
+    {
+      "name": "Colorado Springs",
+      "state": "Colorado",
+      "slug": "colorado-springs",
+      "latitude": 38.8339,
+      "longitude": -104.8214
+    },
+    {
+      "name": "Columbus",
+      "state": "Ohio",
+      "slug": "columbus",
+      "latitude": 39.9612,
+      "longitude": -82.9988
+    },
+    {
+      "name": "Dallas",
+      "state": "Texas",
+      "slug": "dallas",
+      "latitude": 32.7767,
+      "longitude": -96.7970
+    },
+    {
+      "name": "Denver",
+      "state": "Colorado",
+      "slug": "denver",
+      "latitude": 39.7392,
+      "longitude": -104.9903
+    },
+    {
+      "name": "Des Moines",
+      "state": "Iowa",
+      "slug": "des-moines",
+      "latitude": 41.5868,
+      "longitude": -93.6250
+    },
+    {
+      "name": "Detroit",
+      "state": "Michigan",
+      "slug": "detroit",
+      "latitude": 42.3314,
+      "longitude": -83.0458
+    },
+    {
+      "name": "Edmonton",
+      "state": "Alberta",
+      "slug": "edmonton",
+      "latitude": 53.5461,
+      "longitude": -113.4938
+    },
+    {
+      "name": "El Paso",
+      "state": "Texas",
+      "slug": "el-paso",
+      "latitude": 31.7619,
+      "longitude": -106.4850
+    },
+    {
+      "name": "Fort Lauderdale",
+      "state": "Florida",
+      "slug": "fort-lauderdale",
+      "latitude": 26.1224,
+      "longitude": -80.1373
+    },
+    {
+      "name": "Fort Worth",
+      "state": "Texas",
+      "slug": "fort-worth",
+      "latitude": 32.7555,
+      "longitude": -97.3308
+    },
+    {
+      "name": "Fredericton",
+      "state": "New Brunswick",
+      "slug": "fredericton",
+      "latitude": 45.9636,
+      "longitude": -66.6431
+    },
+    {
+      "name": "Fresno",
+      "state": "California",
+      "slug": "fresno",
+      "latitude": 36.7378,
+      "longitude": -119.7871
+    },
+    {
+      "name": "Halifax",
+      "state": "Nova Scotia",
+      "slug": "halifax",
+      "latitude": 44.6488,
+      "longitude": -63.5752
+    },
+    {
+      "name": "Hamilton",
+      "state": "Ontario",
+      "slug": "hamilton",
+      "latitude": 43.2557,
+      "longitude": -79.8711
+    },
+    {
+      "name": "Hartford",
+      "state": "Connecticut",
+      "slug": "hartford",
+      "latitude": 41.7658,
+      "longitude": -72.6734
+    },
+    {
+      "name": "Honolulu",
+      "state": "Hawaii",
+      "slug": "honolulu",
+      "latitude": 21.3069,
+      "longitude": -157.8583
+    },
+    {
+      "name": "Houston",
+      "state": "Texas",
+      "slug": "houston",
+      "latitude": 29.7604,
+      "longitude": -95.3698
+    },
+    {
+      "name": "Indianapolis",
+      "state": "Indiana",
+      "slug": "indianapolis",
+      "latitude": 39.7684,
+      "longitude": -86.1581
+    },
+    {
+      "name": "Jacksonville",
+      "state": "Florida",
+      "slug": "jacksonville",
+      "latitude": 30.3322,
+      "longitude": -81.6557
+    },
+    {
       "name": "Kansas City",
       "state": "Missouri",
       "slug": "kansas-city",
       "latitude": 39.0997,
       "longitude": -94.5786
+    },
+    {
+      "name": "Kelowna",
+      "state": "British Columbia",
+      "slug": "kelowna",
+      "latitude": 49.8880,
+      "longitude": -119.4960
+    },
+    {
+      "name": "Kingston",
+      "state": "Ontario",
+      "slug": "kingston",
+      "latitude": 44.2312,
+      "longitude": -76.4860
+    },
+    {
+      "name": "Kitchener",
+      "state": "Ontario",
+      "slug": "kitchener",
+      "latitude": 43.4516,
+      "longitude": -80.4925
+    },
+    {
+      "name": "Las Vegas",
+      "state": "Nevada",
+      "slug": "las-vegas",
+      "latitude": 36.1699,
+      "longitude": -115.1398
+    },
+    {
+      "name": "Lexington",
+      "state": "Kentucky",
+      "slug": "lexington",
+      "latitude": 38.0406,
+      "longitude": -84.5037
+    },
+    {
+      "name": "Little Rock",
+      "state": "Arkansas",
+      "slug": "little-rock",
+      "latitude": 34.7465,
+      "longitude": -92.2896
+    },
+    {
+      "name": "London",
+      "state": "Ontario",
+      "slug": "london",
+      "latitude": 42.9849,
+      "longitude": -81.2453
+    },
+    {
+      "name": "Long Beach",
+      "state": "California",
+      "slug": "long-beach",
+      "latitude": 33.7701,
+      "longitude": -118.1937
+    },
+    {
+      "name": "Los Angeles",
+      "state": "California",
+      "slug": "los-angeles",
+      "latitude": 34.0522,
+      "longitude": -118.2437
+    },
+    {
+      "name": "Louisville",
+      "state": "Kentucky",
+      "slug": "louisville",
+      "latitude": 38.2527,
+      "longitude": -85.7585
+    },
+    {
+      "name": "Memphis",
+      "state": "Tennessee",
+      "slug": "memphis",
+      "latitude": 35.1495,
+      "longitude": -90.0490
+    },
+    {
+      "name": "Miami",
+      "state": "Florida",
+      "slug": "miami",
+      "latitude": 25.7617,
+      "longitude": -80.1918
+    },
+    {
+      "name": "Milwaukee",
+      "state": "Wisconsin",
+      "slug": "milwaukee",
+      "latitude": 43.0389,
+      "longitude": -87.9065
+    },
+    {
+      "name": "Minneapolis",
+      "state": "Minnesota",
+      "slug": "minneapolis",
+      "latitude": 44.9778,
+      "longitude": -93.2650
+    },
+    {
+      "name": "Moncton",
+      "state": "New Brunswick",
+      "slug": "moncton",
+      "latitude": 46.0878,
+      "longitude": -64.7782
+    },
+    {
+      "name": "Montreal",
+      "state": "Quebec",
+      "slug": "montreal",
+      "latitude": 45.5017,
+      "longitude": -73.5673
+    },
+    {
+      "name": "Nashville",
+      "state": "Tennessee",
+      "slug": "nashville",
+      "latitude": 36.1627,
+      "longitude": -86.7816
+    },
+    {
+      "name": "New Orleans",
+      "state": "Louisiana",
+      "slug": "new-orleans",
+      "latitude": 29.9511,
+      "longitude": -90.0715
+    },
+    {
+      "name": "New York",
+      "state": "New York",
+      "slug": "new-york",
+      "latitude": 40.7128,
+      "longitude": -74.0060
+    },
+    {
+      "name": "Norfolk",
+      "state": "Virginia",
+      "slug": "norfolk",
+      "latitude": 36.8507,
+      "longitude": -76.2859
+    },
+    {
+      "name": "Oakland",
+      "state": "California",
+      "slug": "oakland",
+      "latitude": 37.8044,
+      "longitude": -122.2711
+    },
+    {
+      "name": "Oklahoma City",
+      "state": "Oklahoma",
+      "slug": "oklahoma-city",
+      "latitude": 35.4676,
+      "longitude": -97.5164
+    },
+    {
+      "name": "Omaha",
+      "state": "Nebraska",
+      "slug": "omaha",
+      "latitude": 41.2565,
+      "longitude": -95.9345
+    },
+    {
+      "name": "Orlando",
+      "state": "Florida",
+      "slug": "orlando",
+      "latitude": 28.5383,
+      "longitude": -81.3792
+    },
+    {
+      "name": "Ottawa",
+      "state": "Ontario",
+      "slug": "ottawa",
+      "latitude": 45.4215,
+      "longitude": -75.6972
+    },
+    {
+      "name": "Palm Beach",
+      "state": "Florida",
+      "slug": "palm-beach",
+      "latitude": 26.7056,
+      "longitude": -80.0364
+    },
+    {
+      "name": "Philadelphia",
+      "state": "Pennsylvania",
+      "slug": "philadelphia",
+      "latitude": 39.9526,
+      "longitude": -75.1652
+    },
+    {
+      "name": "Phoenix",
+      "state": "Arizona",
+      "slug": "phoenix",
+      "latitude": 33.4484,
+      "longitude": -112.0740
+    },
+    {
+      "name": "Pittsburgh",
+      "state": "Pennsylvania",
+      "slug": "pittsburgh",
+      "latitude": 40.4406,
+      "longitude": -79.9959
+    },
+    {
+      "name": "Portland",
+      "state": "Maine",
+      "slug": "portland-me",
+      "latitude": 43.6591,
+      "longitude": -70.2568
+    },
+    {
+      "name": "Portland",
+      "state": "Oregon",
+      "slug": "portland-or",
+      "latitude": 45.5155,
+      "longitude": -122.6789
+    },
+    {
+      "name": "Providence",
+      "state": "Rhode Island",
+      "slug": "providence",
+      "latitude": 41.8240,
+      "longitude": -71.4128
+    },
+    {
+      "name": "Quebec City",
+      "state": "Quebec",
+      "slug": "quebec-city",
+      "latitude": 46.8139,
+      "longitude": -71.2080
+    },
+    {
+      "name": "Raleigh",
+      "state": "North Carolina",
+      "slug": "raleigh",
+      "latitude": 35.7796,
+      "longitude": -78.6382
+    },
+    {
+      "name": "Regina",
+      "state": "Saskatchewan",
+      "slug": "regina",
+      "latitude": 50.4452,
+      "longitude": -104.6189
+    },
+    {
+      "name": "Richmond",
+      "state": "Virginia",
+      "slug": "richmond",
+      "latitude": 37.5407,
+      "longitude": -77.4360
+    },
+    {
+      "name": "Rochester",
+      "state": "New York",
+      "slug": "rochester",
+      "latitude": 43.1566,
+      "longitude": -77.6088
     },
     {
       "name": "Sacramento",
@@ -246,53 +547,32 @@
       "longitude": -111.8910
     },
     {
-      "name": "Providence",
-      "state": "Rhode Island",
-      "slug": "providence",
-      "latitude": 41.8240,
-      "longitude": -71.4128
+      "name": "San Antonio",
+      "state": "Texas",
+      "slug": "san-antonio",
+      "latitude": 29.4241,
+      "longitude": -98.4936
     },
     {
-      "name": "Richmond",
-      "state": "Virginia",
-      "slug": "richmond",
-      "latitude": 37.5407,
-      "longitude": -77.4360
+      "name": "San Diego",
+      "state": "California",
+      "slug": "san-diego",
+      "latitude": 32.7157,
+      "longitude": -117.1611
     },
     {
-      "name": "Buffalo",
-      "state": "New York",
-      "slug": "buffalo",
-      "latitude": 42.8864,
-      "longitude": -78.8784
+      "name": "San Francisco",
+      "state": "California",
+      "slug": "san-francisco",
+      "latitude": 37.7749,
+      "longitude": -122.4194
     },
     {
-      "name": "Raleigh",
-      "state": "North Carolina",
-      "slug": "raleigh",
-      "latitude": 35.7796,
-      "longitude": -78.6382
-    },
-    {
-      "name": "Hartford",
-      "state": "Connecticut",
-      "slug": "hartford",
-      "latitude": 41.7658,
-      "longitude": -72.6734
-    },
-    {
-      "name": "Charleston",
-      "state": "South Carolina",
-      "slug": "charleston",
-      "latitude": 32.7765,
-      "longitude": -79.9311
-    },
-    {
-      "name": "Savannah",
-      "state": "Georgia",
-      "slug": "savannah",
-      "latitude": 32.0809,
-      "longitude": -81.0912
+      "name": "San Jose",
+      "state": "California",
+      "slug": "san-jose",
+      "latitude": 37.3382,
+      "longitude": -121.8863
     },
     {
       "name": "Santa Fe",
@@ -302,18 +582,151 @@
       "longitude": -105.9378
     },
     {
-      "name": "Palm Beach",
-      "state": "Florida",
-      "slug": "palm-beach",
-      "latitude": 26.7056,
-      "longitude": -80.0364
+      "name": "Saskatoon",
+      "state": "Saskatchewan",
+      "slug": "saskatoon",
+      "latitude": 52.1332,
+      "longitude": -106.6700
     },
     {
-      "name": "Aspen",
-      "state": "Colorado",
-      "slug": "aspen",
-      "latitude": 39.1911,
-      "longitude": -106.8175
+      "name": "Savannah",
+      "state": "Georgia",
+      "slug": "savannah",
+      "latitude": 32.0809,
+      "longitude": -81.0912
+    },
+    {
+      "name": "Seattle",
+      "state": "Washington",
+      "slug": "seattle",
+      "latitude": 47.6062,
+      "longitude": -122.3321
+    },
+    {
+      "name": "St. John's",
+      "state": "Newfoundland and Labrador",
+      "slug": "st-johns",
+      "latitude": 47.5615,
+      "longitude": -52.7126
+    },
+    {
+      "name": "St. Louis",
+      "state": "Missouri",
+      "slug": "st-louis",
+      "latitude": 38.6270,
+      "longitude": -90.1994
+    },
+    {
+      "name": "St. Paul",
+      "state": "Minnesota",
+      "slug": "st-paul",
+      "latitude": 44.9537,
+      "longitude": -93.0900
+    },
+    {
+      "name": "Sudbury",
+      "state": "Ontario",
+      "slug": "sudbury",
+      "latitude": 46.4917,
+      "longitude": -80.9930
+    },
+    {
+      "name": "Tampa",
+      "state": "Florida",
+      "slug": "tampa",
+      "latitude": 27.9506,
+      "longitude": -82.4572
+    },
+    {
+      "name": "Thunder Bay",
+      "state": "Ontario",
+      "slug": "thunder-bay",
+      "latitude": 48.3809,
+      "longitude": -89.2477
+    },
+    {
+      "name": "Toledo",
+      "state": "Ohio",
+      "slug": "toledo",
+      "latitude": 41.6528,
+      "longitude": -83.5379
+    },
+    {
+      "name": "Toronto",
+      "state": "Ontario",
+      "slug": "toronto",
+      "latitude": 43.6532,
+      "longitude": -79.3832
+    },
+    {
+      "name": "Tucson",
+      "state": "Arizona",
+      "slug": "tucson",
+      "latitude": 32.2226,
+      "longitude": -110.9747
+    },
+    {
+      "name": "Tulsa",
+      "state": "Oklahoma",
+      "slug": "tulsa",
+      "latitude": 36.1540,
+      "longitude": -95.9928
+    },
+    {
+      "name": "Vancouver",
+      "state": "British Columbia",
+      "slug": "vancouver",
+      "latitude": 49.2827,
+      "longitude": -123.1207
+    },
+    {
+      "name": "Victoria",
+      "state": "British Columbia",
+      "slug": "victoria",
+      "latitude": 48.4284,
+      "longitude": -123.3656
+    },
+    {
+      "name": "Virginia Beach",
+      "state": "Virginia",
+      "slug": "virginia-beach",
+      "latitude": 36.8529,
+      "longitude": -75.9780
+    },
+    {
+      "name": "Washington",
+      "state": "District of Columbia",
+      "slug": "washington-dc",
+      "latitude": 38.9072,
+      "longitude": -77.0369
+    },
+    {
+      "name": "Whitehorse",
+      "state": "Yukon",
+      "slug": "whitehorse",
+      "latitude": 60.7212,
+      "longitude": -135.0568
+    },
+    {
+      "name": "Wichita",
+      "state": "Kansas",
+      "slug": "wichita",
+      "latitude": 37.6872,
+      "longitude": -97.3301
+    },
+    {
+      "name": "Winnipeg",
+      "state": "Manitoba",
+      "slug": "winnipeg",
+      "latitude": 49.8951,
+      "longitude": -97.1384
+    },
+    {
+      "name": "Yellowknife",
+      "state": "Northwest Territories",
+      "slug": "yellowknife",
+      "latitude": 62.4540,
+      "longitude": -114.3718
     }
   ]
 }

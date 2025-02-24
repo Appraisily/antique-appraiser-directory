@@ -1,12 +1,12 @@
-# Art Appraiser Directory Service
+# Antique Appraiser Directory Service
 
 ## Overview
-This service creates and maintains a comprehensive directory of art appraisers across major US cities. It uses AI-powered data collection and processing to ensure accurate, structured information about art appraisal services.
+This service creates and maintains a comprehensive directory of antique appraisers across major US cities. It uses AI-powered data collection and processing to ensure accurate, structured information about antique appraisal services.
 
 ## Core Features
 
 ### 1. Data Collection & Processing
-- Gathers detailed art appraiser information using Perplexity AI
+- Gathers detailed antique appraiser information using Perplexity AI
 - Processes raw data into structured JSON format using OpenAI
 - Supports both single-city and batch processing
 - Intelligent data deduplication and skip logic
@@ -29,25 +29,25 @@ This service creates and maintains a comprehensive directory of art appraisers a
 #### Data Processing
 ```bash
 # Process a single city
-POST /api/art-appraiser/process-structured-data/:city/:state
+POST /api/antique-appraiser/process-structured-data/:city/:state
 
 # Process all cities
-POST /api/art-appraiser/process-structured-data
+POST /api/antique-appraiser/process-structured-data
 
 # Process raw city data
-POST /api/art-appraiser/process-cities
+POST /api/antique-appraiser/process-cities
 ```
 
 #### Data Retrieval
 ```bash
 # Get city data
-GET /api/art-appraiser/:state/:city
+GET /api/antique-appraiser/:state/:city
 
 # List cities in state
-GET /api/art-appraiser/state/:state
+GET /api/antique-appraiser/state/:state
 
 # Search cities
-GET /api/art-appraiser/search
+GET /api/antique-appraiser/search
 ```
 
 ### 4. Data Structure

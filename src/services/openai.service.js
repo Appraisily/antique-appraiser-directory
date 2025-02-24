@@ -70,7 +70,7 @@ class OpenAIService {
     }
     
     const systemPrompt = version === 'v3' ? 
-      `You are an AI assistant that processes information about art appraisers and outputs it in a structured JSON format. Each appraiser entry should include:
+      `You are an AI assistant that processes information about antique appraisers and outputs it in a structured JSON format. Each appraiser entry should include:
       - name (string)
       - specialties (array of strings)
       - pricing (array of strings or string)
@@ -83,7 +83,7 @@ class OpenAIService {
       - website (string)
       - notes (string)
       
-      Output only valid JSON that can be parsed. Format as {"appraisers": [...]}` 
+      Output only valid JSON that can be parsed. Format as {"appraisers": [...]}`
       : "You are an expert content enhancer specializing in antiques and art valuation. Your task is to enhance WordPress content while maintaining HTML structure and adding compelling CTAs. Return only the enhanced content with HTML formatting.";
 
     try {

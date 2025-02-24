@@ -1,32 +1,32 @@
-const structuredDataPrompt = `You are an AI assistant that processes the following information about art appraisers and outputs it in a structured JSON format. 
+const structuredDataPrompt = `You are an AI assistant that processes the following information about antique appraisers and outputs it in a structured JSON format. 
 
 ---
 [DATA BEGINS]
 
-Here is the information about art appraisers we've collected:
+Here is the information about antique appraisers we've collected:
 
-1. Anderson Fine Art Appraisals (AFAA)
-   - Specializes in European/American art, including Contemporary, Modern, Impressionist, and 19th-century works
+1. Anderson Antique Appraisals (AAA)
+   - Specializes in European/American antiques, including furniture, decorative arts, and collectibles
    - Expert witness services, litigation support, authentication research
    - Decades of experience
    - Location: Los Angeles
-   - Website: www.art-appraisals.net
+   - Website: www.antique-appraisals.net
 
 2. Escher Associates (EA)
    - Founded in 1984 by Nancy Escher, ASA-certified
-   - Specialties: Paintings, sculpture, photography, rare books
+   - Specialties: Period furniture, porcelain, silver, rare books
    - Fees: $350/hour or $2,500/day plus expenses
    - USPAP and ASA standards
-   - Handled art fraud cases with LAPD
+   - Handled antique fraud cases with LAPD
    - Website: www.escher-associates.com
 
-3. Page Art, Inc.
+3. Page Antiques, Inc.
    - Insurance, estates, donations, and litigation appraisals
    - Hourly rate: $350
    - Minimum for in-office consults: $500
    - Service areas: Los Angeles, Bay Area, Orange County, out-of-state
    - Credentials: ASA, ISA, or AAA
-   - Website: www.page-art.com
+   - Website: www.page-antiques.com
 
 4. Saylor Rice Appraisals
    - Clients: LACMA, MoMA
@@ -42,7 +42,7 @@ Here is the information about art appraisers we've collected:
 
 6. Mimesis Gallery
    - Offers free valuations and same-day offers in LA
-   - Consignment-based sales 
+   - Consignment-based sales
    - Fees: 20% up to $500K, 10% beyond that
    - Location: Westwood Blvd, Los Angeles
    - Website: www.mimesisgallery.com

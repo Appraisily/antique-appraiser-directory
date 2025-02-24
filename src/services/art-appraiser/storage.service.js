@@ -1,9 +1,9 @@
 const contentStorage = require('../../utils/storage');
 
-class ArtAppraiserStorageService {
+class AntiqueAppraiserStorageService {
   constructor() {
-    this.basePath = 'cities';
-    this.globalPath = 'Global';
+    this.basePath = 'antique-appraisers/cities';
+    this.globalPath = 'antique-appraisers/global';
   }
 
   /**
@@ -38,7 +38,7 @@ class ArtAppraiserStorageService {
       data,
       timestamp: new Date().toISOString(),
       metadata: {
-        type,
+        type: `antique_appraiser_${type}`,
         city,
         state
       }
@@ -52,11 +52,11 @@ class ArtAppraiserStorageService {
 
     // If this is structured data, also save in Global folder with just the data
     if (globalFilePath) {
-      console.log('[ART-APPRAISER] Storing data in Global folder:', { city, globalPath: globalFilePath });
+      console.log('[ANTIQUE-APPRAISER] Storing data in Global folder:', { city, globalPath: globalFilePath });
       await contentStorage.storeContent(
         globalFilePath,
         data.data, // Store only the data object, not the metadata wrapper
-        { type: 'art_appraiser_global', city, state }
+        { type: 'antique_appraiser_global', city, state }
       );
     }
 
@@ -80,7 +80,7 @@ class ArtAppraiserStorageService {
       for (const path of filePaths) {
         try {
           await contentStorage.getContent(path);
-          console.log('[ART-APPRAISER] Structured data found at:', path);
+          console.log('[ANTIQUE-APPRAISER] Structured data found at:', path);
           return true;
         } catch (error) {
           if (!error.message.includes('File not found')) {
@@ -89,10 +89,10 @@ class ArtAppraiserStorageService {
         }
       }
       
-      console.log('[ART-APPRAISER] No structured data found for:', { city, state });
+      console.log('[ANTIQUE-APPRAISER] No structured data found for:', { city, state });
       return false;
     } catch (error) {
-      console.error('[ART-APPRAISER] Error checking structured data:', error);
+      console.error('[ANTIQUE-APPRAISER] Error checking structured data:', error);
       throw error;
     }
   }
@@ -108,11 +108,11 @@ class ArtAppraiserStorageService {
 
     try {
       const data = await contentStorage.getContent(filePath);
-      console.log('[ART-APPRAISER] Structured data found for:', { city, state });
+      console.log('[ANTIQUE-APPRAISER] Structured data found for:', { city, state });
       return data;
     } catch (error) {
       if (error.message.includes('File not found')) {
-        console.log('[ART-APPRAISER] No structured data found for:', { city, state });
+        console.log('[ANTIQUE-APPRAISER] No structured data found for:', { city, state });
         return null;
       }
       throw error;
@@ -128,7 +128,7 @@ class ArtAppraiserStorageService {
     const slug = this.createSlug(city);
     const filePath = `${this.basePath}/${slug}/data.json`;
 
-    console.log('[ART-APPRAISER] Retrieving data:', {
+    console.log('[ANTIQUE-APPRAISER] Retrieving data:', {
       city,
       state,
       path: filePath
@@ -136,14 +136,14 @@ class ArtAppraiserStorageService {
     
     try {
       const data = await contentStorage.getContent(filePath);
-      console.log('[ART-APPRAISER] Data found for:', { city, state });
+      console.log('[ANTIQUE-APPRAISER] Data found for:', { city, state });
       return data;
     } catch (error) {
       if (error.message.includes('File not found')) {
-        console.log('[ART-APPRAISER] No data found for:', { city, state });
+        console.log('[ANTIQUE-APPRAISER] No data found for:', { city, state });
         return null;
       }
-      console.error('[ART-APPRAISER] Error retrieving data:', error);
+      console.error('[ANTIQUE-APPRAISER] Error retrieving data:', error);
       throw error;
     }
   }
