@@ -3,7 +3,7 @@ const contentStorage = require('../../utils/storage');
 class ArtAppraiserStorageService {
   constructor() {
     this.basePath = 'antique-appraisers/cities';
-    this.globalPath = 'antique-appraisers/global';
+    this.globalPath = 'antique-appraisers-Global';
   }
 
   /**
@@ -21,7 +21,7 @@ class ArtAppraiserStorageService {
     
     // For structured data, also save in Global folder
     const globalFilePath = type === 'structured-data' 
-      ? `${this.globalPath}/${slug}.json`
+      ? `${this.globalPath}/${state.toLowerCase()}/${slug}.json`
       : null;
 
     console.log('[ART-APPRAISER] Storing data:', {
@@ -72,7 +72,7 @@ class ArtAppraiserStorageService {
     const slug = this.createSlug(city);
     const filePaths = [
       `${this.basePath}/${slug}.json`,
-      `${this.globalPath}/${slug}.json`
+      `${this.globalPath}/${state.toLowerCase()}/${slug}.json`
     ];
 
     try {
@@ -104,7 +104,7 @@ class ArtAppraiserStorageService {
    */
   async getGlobalData(city, state) {
     const slug = this.createSlug(city);
-    const filePath = `${this.globalPath}/${slug}.json`;
+    const filePath = `${this.globalPath}/${state.toLowerCase()}/${slug}.json`;
 
     try {
       const data = await contentStorage.getContent(filePath);
