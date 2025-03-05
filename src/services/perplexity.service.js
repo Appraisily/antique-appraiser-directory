@@ -6,13 +6,14 @@ const { secretNames } = require('../config');
 class PerplexityService {
   constructor() {
     this.apiUrl = 'https://api.perplexity.ai/chat/completions';
-    this.apiKey = null;
+    // Hardcoded API key - no need to load from secrets
+    this.apiKey = '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';
   }
 
   async initialize() {
     try {
-      this.apiKey = await getSecret(secretNames.perplexityKey);
-      console.log('[PERPLEXITY] Service initialized successfully');
+      // Simply use the hardcoded API key instead of loading from secrets
+      console.log('[PERPLEXITY] Service initialized successfully with hardcoded API key');
       return true;
     } catch (error) {
       console.error('[PERPLEXITY] Service initialization failed:', error);
@@ -79,7 +80,11 @@ class PerplexityService {
       console.log('[PERPLEXITY] Raw response:', result.substring(0, 100) + '...');
 
       // Cache the result
-      await this.cacheResult(prompt, result, type);
+      try {
+        await this.cacheResult(prompt, result, type);
+      } catch (cacheError) {
+        console.warn('[PERPLEXITY] Failed to cache result:', cacheError.message);
+      }
 
       return result;
 
@@ -107,7 +112,7 @@ class PerplexityService {
   }
 
   async getAntiqueAppraiserData(city, state) {
-    const prompt = `Create a detailed directory of art appraisers in ${city}, ${state}. Include:
+    const prompt = `Create a detailed directory of antique appraisers in ${city}, ${state}. Include:
 
 1. Overview of antique appraisal services in ${city}
 2. List as many antique appraisers as possible with their:
@@ -138,14 +143,19 @@ Keep the response concise and factual.`;
       timestamp: new Date().toISOString()
     };
 
-    const hash = Buffer.from(prompt).toString('base64').substring(0, 32);
-    const filePath = `perplexity/${type}/${hash}.json`;
+    try {
+      const hash = Buffer.from(prompt).toString('base64').substring(0, 32);
+      const filePath = `perplexity/${type}/${hash}.json`;
 
-    await contentStorage.storeContent(
-      filePath,
-      cacheData,
-      { type: 'perplexity_result', resultType: type }
-    );
+      await contentStorage.storeContent(
+        filePath,
+        cacheData,
+        { type: 'perplexity_result', resultType: type }
+      );
+    } catch (error) {
+      console.warn('[PERPLEXITY] Failed to cache result to cloud storage:', error.message);
+      // Continue even if caching fails - this is non-critical
+    }
   }
 }
 

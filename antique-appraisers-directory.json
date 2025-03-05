@@ -1,0 +1,66 @@
+{
+  "generated": "2025-03-05T11:43:03.951Z",
+  "testMode": true,
+  "cities": [
+    {
+      "name": "Albuquerque",
+      "state": "New Mexico",
+      "slug": "albuquerque",
+      "error": "Storage not initialized"
+    },
+    {
+      "name": "Anchorage",
+      "state": "Alaska",
+      "slug": "anchorage",
+      "error": "Storage not initialized"
+    },
+    {
+      "name": "Arlington",
+      "state": "Texas",
+      "slug": "arlington",
+      "error": "Storage not initialized"
+    },
+    {
+      "name": "Aspen",
+      "state": "Colorado",
+      "slug": "aspen",
+      "error": "Storage not initialized"
+    },
+    {
+      "name": "Atlanta",
+      "state": "Georgia",
+      "slug": "atlanta",
+      "error": "Storage not initialized"
+    },
+    {
+      "name": "Austin",
+      "state": "Texas",
+      "slug": "austin",
+      "error": "Storage not initialized"
+    },
+    {
+      "name": "Baltimore",
+      "state": "Maryland",
+      "slug": "baltimore",
+      "error": "Storage not initialized"
+    },
+    {
+      "name": "Baton Rouge",
+      "state": "Louisiana",
+      "slug": "baton-rouge",
+      "error": "Storage not initialized"
+    },
+    {
+      "name": "Birmingham",
+      "state": "Alabama",
+      "slug": "birmingham",
+      "error": "Storage not initialized"
+    },
+    {
+      "name": "Boise",
+      "state": "Idaho",
+      "slug": "boise",
+      "error": "Storage not initialized"
+    }
+  ]
+}

@@ -1,28 +1,21 @@
 # Antique Appraiser Directory Service
 
 ## Overview
-This service creates and maintains a comprehensive directory of antique appraisers across major US cities. It uses AI-powered data collection and processing to ensure accurate, structured information about antique appraisal services.
+This service creates and maintains a comprehensive directory of antique appraisers across major US cities. It uses Perplexity AI for data collection and OpenAI for structured data processing.
 
 ## Core Features
 
-### 1. Data Collection & Processing
+### 1. Data Collection
 - Gathers detailed antique appraiser information using Perplexity AI
-- Processes raw data into structured JSON format using OpenAI
+- Generates a comprehensive directory of appraisers for each city
 - Supports both single-city and batch processing
-- Intelligent data deduplication and skip logic
+- Includes details like specialties, contact information, and certifications
 
-### 2. Dual Storage Architecture
-#### City-Specific Storage (`cities/`)
-- Structured by city name
-- Maintains full metadata and processing history
-- Stores both raw and processed data
-- Includes timestamps and processing details
-
-#### Global Storage (`Global/`)
-- Flat structure with city-named files
-- Contains only processed, structured data
-- Optimized for quick access and integration
-- Direct JSON format without metadata wrapper
+### 2. Directory Generation
+- Complete directory of all cities in the list
+- Individual city files for easy access
+- Structured data for integration with other systems
+- Local file storage without cloud dependencies
 
 ### 3. API Endpoints
 
@@ -36,6 +29,12 @@ POST /api/antique-appraiser/process-structured-data
 
 # Process raw city data
 POST /api/antique-appraiser/process-cities
+
+# Generate complete directory for all cities
+POST /api/antique-appraiser/generate-directory
+
+# Generate structured directory from existing data
+POST /api/antique-appraiser/generate-structured-directory
 ```
 
 #### Data Retrieval
@@ -50,8 +49,40 @@ GET /api/antique-appraiser/state/:state
 GET /api/antique-appraiser/search
 ```
 
-### 4. Data Structure
-Each appraiser entry includes:
+### 4. Directory Generation Options
+
+#### Using the All-Cities Script
+```bash
+# Generate directory for ALL cities (will take several hours)
+./generate-all-cities.sh
+```
+
+#### Using the Batch Script (Recommended)
+```bash
+# Generate directory for a batch of 10 cities starting at index 0
+./generate-batch.sh
+
+# Specify batch size and start index
+./generate-batch.sh --batch=20 --start=30
+
+# Continue with the next batch (shown at the end of each batch)
+./generate-batch.sh --batch=10 --start=50
+```
+
+#### Using the Test Script
+```bash
+# Generate directory for the first 3 cities (quick test)
+node src/scripts/test-direct.js
+```
+
+#### Output Files
+- `output/antique-appraisers-directory.json`: Contains the full directory (all-cities mode)
+- `output/batch-X-Y.json`: Contains data for batch of cities (batch mode)
+- `output/cities/*.json`: Individual JSON files for each city
+- `output/directory-summary.json`: Summary of the directory generation (all-cities mode)
+
+### 5. Data Structure
+Each appraiser entry typically includes:
 - Name and business details
 - Specialties and expertise
 - Contact information
@@ -62,93 +93,67 @@ Each appraiser entry includes:
 
 ## Services Integration
 
-### 1. Perplexity AI
+### 1. Perplexity API
 - Used for initial data gathering
 - Provides comprehensive city-specific information
 - Real-time data updates and verification
+- API Key: `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` (hardcoded)
 
-### 2. OpenAI
-- Structures raw data into consistent JSON format
-- Ensures data quality and completeness
-- Validates structured output
-
-### 3. Google Cloud Storage
-- Secure data storage and retrieval
-- Automatic versioning and backup
-- High availability and scalability
+### 2. Local File Storage
+- No cloud dependencies required
+- Stores JSON files in the output directory
+- Simple file structure for easy access and sharing
+- Includes both raw and processed data
 
 ## Development
 
 ### Prerequisites
 - Node.js 18+
-- Google Cloud SDK
-- Access to required API keys:
-  - OpenAI API key
-  - Perplexity API key
-- Google Cloud Storage bucket access
-
-### Environment Variables
-| Variable | Description | Required |
-|----------|-------------|----------|
-| `PROJECT_ID` | Google Cloud project ID | Yes |
-| `PORT` | Server port (default: 8080) | No |
+- Perplexity API key (already hardcoded: `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`)
 
 ### Local Setup
 1. Clone the repository
 2. Install dependencies: `npm install`
-3. Set up environment variables
-4. Run locally: `npm start`
+3. Run one of the directory generation scripts
 
-## API Response Format
+### Directory Generation Tips
+1. For testing, use the test script to process just a few cities
+2. For production, use the batch script to process cities in manageable chunks
+3. For a complete run, use the all-cities script (but be prepared to wait several hours)
+4. All scripts save results to the `output/` directory
 
-### Successful Response
+## Response Format
+
+### Single City Data
 ```json
 {
-  "success": true,
-  "data": {
-    "appraisers": [
-      {
-        "name": "Example Appraisers",
-        "specialties": ["Fine Art", "Antiques"],
-        "pricing": ["$350/hour", "$2,500/day"],
-        "services_offered": ["Insurance", "Estate"],
-        "certifications": ["ASA", "USPAP"],
-        "years_in_business": 25,
-        "city": "New York",
-        "state": "NY",
-        "phone": "212-555-0123",
-        "website": "www.example.com",
-        "notes": "Additional details"
+  "city": "Chicago",
+  "state": "Illinois",
+  "content": "Detailed information about antique appraisers in Chicago...",
+  "timestamp": "2023-06-21T12:34:56.789Z",
+  "metadata": {
+    "type": "antique_appraiser_data",
+    "source": "perplexity",
+    "processedAt": "2023-06-21T12:34:56.789Z"
+  }
+}
+```
+
+### Directory Data
+```json
+{
+  "generated": "2023-06-21T12:34:56.789Z",
+  "totalCities": 100,
+  "cities": [
+    {
+      "name": "Chicago",
+      "state": "Illinois",
+      "slug": "chicago",
+      "data": {
+        // Single city data object (see above)
       }
-    ]
-  }
-}
-```
-
-### Error Response
-```json
-{
-  "success": false,
-  "error": "Error message",
-  "details": {
-    "code": "ERROR_CODE",
-    "message": "Detailed error message"
-  }
-}
-```
-
-## Health Check
-```bash
-GET /health
-```
-Returns:
-```json
-{
-  "status": "ok",
-  "services": {
-    "storage": "connected",
-    "perplexity": "connected",
-    "openai": "connected"
-  }
+    },
+    // More cities...
+  ]
 }
 ```

@@ -1,0 +1,546 @@
+{
+  "generated": "2025-03-05T11:37:08.251Z",
+  "testMode": true,
+  "cities": [
+    {
+      "name": "Albuquerque",
+      "state": "New Mexico",
+      "slug": "albuquerque",
+      "data": {
+        "appraisers": [
+          {
+            "name": "Albuquerque Antique Appraisals",
+            "specialties": [
+              "European Art",
+              "American Antiques",
+              "Furniture"
+            ],
+            "pricing": "$300-$500 per hour",
+            "services_offered": [
+              "Insurance Appraisals",
+              "Estate Valuations"
+            ],
+            "certifications": [
+              "ASA",
+              "USPAP"
+            ],
+            "years_in_business": 15,
+            "city": "Albuquerque",
+            "state": "New Mexico",
+            "phone": "555-123-4567",
+            "website": "www.albuquerque-antiques.com",
+            "notes": "This is test data generated in test mode."
+          },
+          {
+            "name": "Albuquerque Heritage Appraisers",
+            "specialties": [
+              "Asian Art",
+              "Porcelain",
+              "Jewelry"
+            ],
+            "pricing": "$250 per hour",
+            "services_offered": [
+              "Authentication",
+              "Valuation"
+            ],
+            "certifications": [
+              "ISA"
+            ],
+            "years_in_business": 8,
+            "city": "Albuquerque",
+            "state": "New Mexico",
+            "phone": "555-987-6543",
+            "website": "www.albuquerqueheritage.com",
+            "notes": "This is test data generated in test mode."
+          }
+        ]
+      }
+    },
+    {
+      "name": "Anchorage",
+      "state": "Alaska",
+      "slug": "anchorage",
+      "data": {
+        "appraisers": [
+          {
+            "name": "Anchorage Antique Appraisals",
+            "specialties": [
+              "European Art",
+              "American Antiques",
+              "Furniture"
+            ],
+            "pricing": "$300-$500 per hour",
+            "services_offered": [
+              "Insurance Appraisals",
+              "Estate Valuations"
+            ],
+            "certifications": [
+              "ASA",
+              "USPAP"
+            ],
+            "years_in_business": 15,
+            "city": "Anchorage",
+            "state": "Alaska",
+            "phone": "555-123-4567",
+            "website": "www.anchorage-antiques.com",
+            "notes": "This is test data generated in test mode."
+          },
+          {
+            "name": "Anchorage Heritage Appraisers",
+            "specialties": [
+              "Asian Art",
+              "Porcelain",
+              "Jewelry"
+            ],
+            "pricing": "$250 per hour",
+            "services_offered": [
+              "Authentication",
+              "Valuation"
+            ],
+            "certifications": [
+              "ISA"
+            ],
+            "years_in_business": 8,
+            "city": "Anchorage",
+            "state": "Alaska",
+            "phone": "555-987-6543",
+            "website": "www.anchorageheritage.com",
+            "notes": "This is test data generated in test mode."
+          }
+        ]
+      }
+    },
+    {
+      "name": "Arlington",
+      "state": "Texas",
+      "slug": "arlington",
+      "data": {
+        "appraisers": [
+          {
+            "name": "Arlington Antique Appraisals",
+            "specialties": [
+              "European Art",
+              "American Antiques",
+              "Furniture"
+            ],
+            "pricing": "$300-$500 per hour",
+            "services_offered": [
+              "Insurance Appraisals",
+              "Estate Valuations"
+            ],
+            "certifications": [
+              "ASA",
+              "USPAP"
+            ],
+            "years_in_business": 15,
+            "city": "Arlington",
+            "state": "Texas",
+            "phone": "555-123-4567",
+            "website": "www.arlington-antiques.com",
+            "notes": "This is test data generated in test mode."
+          },
+          {
+            "name": "Arlington Heritage Appraisers",
+            "specialties": [
+              "Asian Art",
+              "Porcelain",
+              "Jewelry"
+            ],
+            "pricing": "$250 per hour",
+            "services_offered": [
+              "Authentication",
+              "Valuation"
+            ],
+            "certifications": [
+              "ISA"
+            ],
+            "years_in_business": 8,
+            "city": "Arlington",
+            "state": "Texas",
+            "phone": "555-987-6543",
+            "website": "www.arlingtonheritage.com",
+            "notes": "This is test data generated in test mode."
+          }
+        ]
+      }
+    },
+    {
+      "name": "Aspen",
+      "state": "Colorado",
+      "slug": "aspen",
+      "data": {
+        "appraisers": [
+          {
+            "name": "Aspen Antique Appraisals",
+            "specialties": [
+              "European Art",
+              "American Antiques",
+              "Furniture"
+            ],
+            "pricing": "$300-$500 per hour",
+            "services_offered": [
+              "Insurance Appraisals",
+              "Estate Valuations"
+            ],
+            "certifications": [
+              "ASA",
+              "USPAP"
+            ],
+            "years_in_business": 15,
+            "city": "Aspen",
+            "state": "Colorado",
+            "phone": "555-123-4567",
+            "website": "www.aspen-antiques.com",
+            "notes": "This is test data generated in test mode."
+          },
+          {
+            "name": "Aspen Heritage Appraisers",
+            "specialties": [
+              "Asian Art",
+              "Porcelain",
+              "Jewelry"
+            ],
+            "pricing": "$250 per hour",
+            "services_offered": [
+              "Authentication",
+              "Valuation"
+            ],
+            "certifications": [
+              "ISA"
+            ],
+            "years_in_business": 8,
+            "city": "Aspen",
+            "state": "Colorado",
+            "phone": "555-987-6543",
+            "website": "www.aspenheritage.com",
+            "notes": "This is test data generated in test mode."
+          }
+        ]
+      }
+    },
+    {
+      "name": "Atlanta",
+      "state": "Georgia",
+      "slug": "atlanta",
+      "data": {
+        "appraisers": [
+          {
+            "name": "Atlanta Antique Appraisals",
+            "specialties": [
+              "European Art",
+              "American Antiques",
+              "Furniture"
+            ],
+            "pricing": "$300-$500 per hour",
+            "services_offered": [
+              "Insurance Appraisals",
+              "Estate Valuations"
+            ],
+            "certifications": [
+              "ASA",
+              "USPAP"
+            ],
+            "years_in_business": 15,
+            "city": "Atlanta",
+            "state": "Georgia",
+            "phone": "555-123-4567",
+            "website": "www.atlanta-antiques.com",
+            "notes": "This is test data generated in test mode."
+          },
+          {
+            "name": "Atlanta Heritage Appraisers",
+            "specialties": [
+              "Asian Art",
+              "Porcelain",
+              "Jewelry"
+            ],
+            "pricing": "$250 per hour",
+            "services_offered": [
+              "Authentication",
+              "Valuation"
+            ],
+            "certifications": [
+              "ISA"
+            ],
+            "years_in_business": 8,
+            "city": "Atlanta",
+            "state": "Georgia",
+            "phone": "555-987-6543",
+            "website": "www.atlantaheritage.com",
+            "notes": "This is test data generated in test mode."
+          }
+        ]
+      }
+    },
+    {
+      "name": "Austin",
+      "state": "Texas",
+      "slug": "austin",
+      "data": {
+        "appraisers": [
+          {
+            "name": "Austin Antique Appraisals",
+            "specialties": [
+              "European Art",
+              "American Antiques",
+              "Furniture"
+            ],
+            "pricing": "$300-$500 per hour",
+            "services_offered": [
+              "Insurance Appraisals",
+              "Estate Valuations"
+            ],
+            "certifications": [
+              "ASA",
+              "USPAP"
+            ],
+            "years_in_business": 15,
+            "city": "Austin",
+            "state": "Texas",
+            "phone": "555-123-4567",
+            "website": "www.austin-antiques.com",
+            "notes": "This is test data generated in test mode."
+          },
+          {
+            "name": "Austin Heritage Appraisers",
+            "specialties": [
+              "Asian Art",
+              "Porcelain",
+              "Jewelry"
+            ],
+            "pricing": "$250 per hour",
+            "services_offered": [
+              "Authentication",
+              "Valuation"
+            ],
+            "certifications": [
+              "ISA"
+            ],
+            "years_in_business": 8,
+            "city": "Austin",
+            "state": "Texas",
+            "phone": "555-987-6543",
+            "website": "www.austinheritage.com",
+            "notes": "This is test data generated in test mode."
+          }
+        ]
+      }
+    },
+    {
+      "name": "Baltimore",
+      "state": "Maryland",
+      "slug": "baltimore",
+      "data": {
+        "appraisers": [
+          {
+            "name": "Baltimore Antique Appraisals",
+            "specialties": [
+              "European Art",
+              "American Antiques",
+              "Furniture"
+            ],
+            "pricing": "$300-$500 per hour",
+            "services_offered": [
+              "Insurance Appraisals",
+              "Estate Valuations"
+            ],
+            "certifications": [
+              "ASA",
+              "USPAP"
+            ],
+            "years_in_business": 15,
+            "city": "Baltimore",
+            "state": "Maryland",
+            "phone": "555-123-4567",
+            "website": "www.baltimore-antiques.com",
+            "notes": "This is test data generated in test mode."
+          },
+          {
+            "name": "Baltimore Heritage Appraisers",
+            "specialties": [
+              "Asian Art",
+              "Porcelain",
+              "Jewelry"
+            ],
+            "pricing": "$250 per hour",
+            "services_offered": [
+              "Authentication",
+              "Valuation"
+            ],
+            "certifications": [
+              "ISA"
+            ],
+            "years_in_business": 8,
+            "city": "Baltimore",
+            "state": "Maryland",
+            "phone": "555-987-6543",
+            "website": "www.baltimoreheritage.com",
+            "notes": "This is test data generated in test mode."
+          }
+        ]
+      }
+    },
+    {
+      "name": "Baton Rouge",
+      "state": "Louisiana",
+      "slug": "baton-rouge",
+      "data": {
+        "appraisers": [
+          {
+            "name": "Baton Rouge Antique Appraisals",
+            "specialties": [
+              "European Art",
+              "American Antiques",
+              "Furniture"
+            ],
+            "pricing": "$300-$500 per hour",
+            "services_offered": [
+              "Insurance Appraisals",
+              "Estate Valuations"
+            ],
+            "certifications": [
+              "ASA",
+              "USPAP"
+            ],
+            "years_in_business": 15,
+            "city": "Baton Rouge",
+            "state": "Louisiana",
+            "phone": "555-123-4567",
+            "website": "www.baton-rouge-antiques.com",
+            "notes": "This is test data generated in test mode."
+          },
+          {
+            "name": "Baton Rouge Heritage Appraisers",
+            "specialties": [
+              "Asian Art",
+              "Porcelain",
+              "Jewelry"
+            ],
+            "pricing": "$250 per hour",
+            "services_offered": [
+              "Authentication",
+              "Valuation"
+            ],
+            "certifications": [
+              "ISA"
+            ],
+            "years_in_business": 8,
+            "city": "Baton Rouge",
+            "state": "Louisiana",
+            "phone": "555-987-6543",
+            "website": "www.baton-rougeheritage.com",
+            "notes": "This is test data generated in test mode."
+          }
+        ]
+      }
+    },
+    {
+      "name": "Birmingham",
+      "state": "Alabama",
+      "slug": "birmingham",
+      "data": {
+        "appraisers": [
+          {
+            "name": "Birmingham Antique Appraisals",
+            "specialties": [
+              "European Art",
+              "American Antiques",
+              "Furniture"
+            ],
+            "pricing": "$300-$500 per hour",
+            "services_offered": [
+              "Insurance Appraisals",
+              "Estate Valuations"
+            ],
+            "certifications": [
+              "ASA",
+              "USPAP"
+            ],
+            "years_in_business": 15,
+            "city": "Birmingham",
+            "state": "Alabama",
+            "phone": "555-123-4567",
+            "website": "www.birmingham-antiques.com",
+            "notes": "This is test data generated in test mode."
+          },
+          {
+            "name": "Birmingham Heritage Appraisers",
+            "specialties": [
+              "Asian Art",
+              "Porcelain",
+              "Jewelry"
+            ],
+            "pricing": "$250 per hour",
+            "services_offered": [
+              "Authentication",
+              "Valuation"
+            ],
+            "certifications": [
+              "ISA"
+            ],
+            "years_in_business": 8,
+            "city": "Birmingham",
+            "state": "Alabama",
+            "phone": "555-987-6543",
+            "website": "www.birminghamheritage.com",
+            "notes": "This is test data generated in test mode."
+          }
+        ]
+      }
+    },
+    {
+      "name": "Boise",
+      "state": "Idaho",
+      "slug": "boise",
+      "data": {
+        "appraisers": [
+          {
+            "name": "Boise Antique Appraisals",
+            "specialties": [
+              "European Art",
+              "American Antiques",
+              "Furniture"
+            ],
+            "pricing": "$300-$500 per hour",
+            "services_offered": [
+              "Insurance Appraisals",
+              "Estate Valuations"
+            ],
+            "certifications": [
+              "ASA",
+              "USPAP"
+            ],
+            "years_in_business": 15,
+            "city": "Boise",
+            "state": "Idaho",
+            "phone": "555-123-4567",
+            "website": "www.boise-antiques.com",
+            "notes": "This is test data generated in test mode."
+          },
+          {
+            "name": "Boise Heritage Appraisers",
+            "specialties": [
+              "Asian Art",
+              "Porcelain",
+              "Jewelry"
+            ],
+            "pricing": "$250 per hour",
+            "services_offered": [
+              "Authentication",
+              "Valuation"
+            ],
+            "certifications": [
+              "ISA"
+            ],
+            "years_in_business": 8,
+            "city": "Boise",
+            "state": "Idaho",
+            "phone": "555-987-6543",
+            "website": "www.boiseheritage.com",
+            "notes": "This is test data generated in test mode."
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -3,6 +3,7 @@ const router = express.Router();
 const dataService = require('../services/art-appraiser/data.service');
 const storageService = require('../services/art-appraiser/storage.service');
 const structuredDataService = require('../services/art-appraiser/structured-data.service');
+const antiqueDirectoryService = require('../services/art-appraiser/antique-directory.service');
 const citiesData = require('../services/art-appraiser/cities.json');
 
 // Process structured data for a single city
@@ -186,6 +187,79 @@ router.get('/search', async (req, res) => {
     res.json({ success: true, results });
   } catch (error) {
     console.error('[ANTIQUE-APPRAISER] Error searching cities:', error);
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
+// Generate directory of antique appraisers for all cities
+router.post('/generate-directory', async (req, res) => {
+  try {
+    // Initialize the directory service with the API key
+    const apiKey = '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';
+    const testMode = req.body.testMode === true; // Default to false
+    await antiqueDirectoryService.initialize(apiKey, testMode);
+    
+    // Generate the full directory
+    const skipExisting = req.body.skipExisting !== false; // Default to true
+    console.log(`[ANTIQUE-APPRAISER] Generating directory (skipExisting=${skipExisting}, testMode=${testMode})`);
+    
+    // Start the process in the background
+    const generationPromise = antiqueDirectoryService.generateFullDirectory(skipExisting);
+    
+    // Respond immediately
+    res.json({
+      success: true,
+      message: 'Directory generation started',
+      details: {
+        skipExisting,
+        testMode,
+        totalCities: testMode ? 10 : citiesData.cities.length
+      }
+    });
+    
+    // Continue processing without waiting for response
+    await generationPromise;
+    console.log('[ANTIQUE-APPRAISER] Directory generation completed');
+  } catch (error) {
+    console.error('[ANTIQUE-APPRAISER] Error generating directory:', error);
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
+});
+
+// Generate structured directory from existing data
+router.post('/generate-structured-directory', async (req, res) => {
+  try {
+    // Initialize the directory service with the API key
+    const apiKey = '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';
+    const testMode = req.body.testMode === true; // Default to false
+    await antiqueDirectoryService.initialize(apiKey, testMode);
+    
+    console.log(`[ANTIQUE-APPRAISER] Generating structured directory (testMode=${testMode})`);
+    
+    // Start the process in the background
+    const generationPromise = antiqueDirectoryService.generateStructuredDirectory();
+    
+    // Respond immediately
+    res.json({
+      success: true,
+      message: 'Structured directory generation started',
+      details: {
+        testMode,
+        totalCities: testMode ? 10 : citiesData.cities.length
+      }
+    });
+    
+    // Continue processing without waiting for response
+    await generationPromise;
+    console.log('[ANTIQUE-APPRAISER] Structured directory generation completed');
+  } catch (error) {
+    console.error('[ANTIQUE-APPRAISER] Error generating structured directory:', error);
     res.status(500).json({
       success: false,
       error: error.message
