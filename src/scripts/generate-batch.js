@@ -16,6 +16,8 @@ async function generateBatchDirectory() {
   let batchSize = 10;
   // Default start index is 0
   let startIndex = 0;
+  // Default to processing a batch of cities
+  let processAll = false;
   
   // Parse batch size argument (--batch=N)
   const batchArg = args.find(arg => arg.startsWith('--batch='));
@@ -37,8 +39,12 @@ async function generateBatchDirectory() {
     }
   }
   
-  console.log(`Generating antique appraiser directory for batch of cities...`);
-  console.log(`Batch size: ${batchSize}, Start index: ${startIndex}`);
+  // Parse the all flag (--all)
+  const allArg = args.find(arg => arg === '--all');
+  if (allArg) {
+    processAll = true;
+    console.log(`Processing ALL cities in the list`);
+  }
   
   // Use hardcoded Perplexity API key
   const apiKey = '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';
@@ -47,16 +53,29 @@ async function generateBatchDirectory() {
   // Get all cities from the list
   const allCities = citiesData.cities;
   
-  // Calculate end index and validate range
-  const endIndex = Math.min(startIndex + batchSize, allCities.length);
-  if (startIndex >= allCities.length) {
-    console.error(`Start index (${startIndex}) exceeds the number of cities (${allCities.length})`);
-    process.exit(1);
-  }
+  // If processing all cities, use the entire list
+  let batchCities;
+  let endIndex;
   
-  // Get the batch of cities to process
-  const batchCities = allCities.slice(startIndex, endIndex);
-  console.log(`Will process ${batchCities.length} cities (${startIndex} to ${endIndex - 1})`);
+  if (processAll) {
+    batchCities = allCities;
+    startIndex = 0;
+    endIndex = allCities.length;
+    console.log(`Will process all ${batchCities.length} cities (${startIndex} to ${endIndex - 1})`);
+  } else {
+    // Calculate end index and validate range
+    endIndex = Math.min(startIndex + batchSize, allCities.length);
+    if (startIndex >= allCities.length) {
+      console.error(`Start index (${startIndex}) exceeds the number of cities (${allCities.length})`);
+      process.exit(1);
+    }
+    
+    // Get the batch of cities to process
+    batchCities = allCities.slice(startIndex, endIndex);
+    console.log(`Generating antique appraiser directory for batch of cities...`);
+    console.log(`Batch size: ${batchSize}, Start index: ${startIndex}`);
+    console.log(`Will process ${batchCities.length} cities (${startIndex} to ${endIndex - 1})`);
+  }
   
   // Create output directory structure
   const outputDir = path.join(__dirname, '../../output');
@@ -73,7 +92,7 @@ async function generateBatchDirectory() {
   const directory = {
     generated: new Date().toISOString(),
     batchInfo: {
-      batchSize,
+      batchSize: processAll ? allCities.length : batchSize,
       startIndex,
       endIndex: endIndex - 1
     },
@@ -143,7 +162,8 @@ async function generateBatchDirectory() {
   }
   
   // Save the batch directory
-  const batchFilePath = path.join(outputDir, `batch-${startIndex}-${endIndex-1}.json`);
+  const batchSuffix = processAll ? "all" : `${startIndex}-${endIndex-1}`;
+  const batchFilePath = path.join(outputDir, `batch-${batchSuffix}.json`);
   await fs.writeFile(batchFilePath, JSON.stringify(directory, null, 2));
   console.log(`\nSaved batch data to ${batchFilePath}`);
   

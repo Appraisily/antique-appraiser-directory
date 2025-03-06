@@ -144,6 +144,11 @@ Keep the response concise and factual.`;
     };
 
     try {
+      // Make sure storage is initialized
+      if (!contentStorage.isInitialized) {
+        await contentStorage.initialize();
+      }
+      
       const hash = Buffer.from(prompt).toString('base64').substring(0, 32);
       const filePath = `perplexity/${type}/${hash}.json`;
 
@@ -152,8 +157,10 @@ Keep the response concise and factual.`;
         cacheData,
         { type: 'perplexity_result', resultType: type }
       );
+      
+      console.log('[PERPLEXITY] Successfully cached result to local storage');
     } catch (error) {
-      console.warn('[PERPLEXITY] Failed to cache result to cloud storage:', error.message);
+      console.warn('[PERPLEXITY] Failed to cache result:', error.message);
       // Continue even if caching fails - this is non-critical
     }
   }
